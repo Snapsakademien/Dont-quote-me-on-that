@@ -20,20 +20,32 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   function getQuotes(){
       var db = firebase.firestore();
-      db.collection("quotes").get().then(function(querySnapshot){
-        return querySnapshot.map(function(doc){
+      return db.collection("quotes").get().then(function(querySnapshot){
+        return querySnapshot.docs.map(function(doc,i){
             return doc.data();
         });
       });
-
   }
 
   function renderQuotes(quotes){
+    console.log(quotes.length);
+    var wrapper = document.querySelector(".wrapper");
+    var quoteHTML = quotes.map(function(quote){
+        return `<div class="citat-box">
+        <div class="citat">${quote.quote}</div>
+        <div class="person">
+            <i>-${quote.who}, ${new Intl.DateTimeFormat("sv-SE").format(quote.datetime.toDate())}</i>
+        </div>
+    </div>`;
+    });
 
+    wrapper.innerHTML = quoteHTML.join('');
   }
 
   function postQuote(quote, name){
 
   }
 
-  getQuotes();
+getQuotes().then(function(quotes) {
+    renderQuotes(quotes);
+});
