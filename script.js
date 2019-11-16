@@ -46,6 +46,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 getQuotes().then(function(quotes) {
+    quotes.sort(function(a,b){
+        return b.datetime.seconds - a.datetime.seconds;
+    });
     renderQuotes(quotes);
 });
 
