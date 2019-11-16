@@ -62,7 +62,37 @@ body
 input
 {
     width: 100%;
-    padding: 5px 5px;
+    padding: 10px 10px;
     border-radius: 5px;
     border: 1px solid rgba(128, 128, 128, 0.74);
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+label
+{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    font-size: 1.2em;
+}
+
+button
+{
+    background-color: #be9b7b;
+    border: 2px solid #3c2f2f;
+    color: #3c2f2f;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover
+{
+    background-color: #3c2f2f;
+    color: #fff4e6;
 }
