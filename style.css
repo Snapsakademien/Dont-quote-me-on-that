@@ -3,6 +3,13 @@ h1
     color: #fff4e6;
 }
 
+.login-heading
+{
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
 body
 {
     background-color: #be9b7b;
