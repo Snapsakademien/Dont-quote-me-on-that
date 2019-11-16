@@ -41,5 +41,32 @@
                 </div>
             </div>
         </div>
-    </body>
+        <div style="background-color: red; text-align: right">
+          <span style="background-color: blueviolet"><i>-Konrad</i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAuswBpzIjcngTZz9Uzq-R2nLWaBeXQRcc",
+        authDomain: "quote-709be.firebaseapp.com",
+        databaseURL: "https://quote-709be.firebaseio.com",
+        projectId: "quote-709be",
+        storageBucket: "quote-709be.appspot.com",
+        messagingSenderId: "714328067493",
+        appId: "1:714328067493:web:fa9a3b138de6a790e52c4c"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
