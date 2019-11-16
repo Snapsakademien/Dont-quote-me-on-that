@@ -1,0 +1,7 @@
+.wrapper
+{
+    background-color: green; 
+    width: 40%; 
+    max-width: 100%; 
+    margin: 0 auto;
+}
