@@ -29,7 +29,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   function renderQuotes(quotes){
     console.log(quotes.length);
-    var wrapper = document.querySelector(".wrapper");
+    var wrapper = document.querySelector("#quotes");
     var quoteHTML = quotes.map(function(quote){
         return `<div class="citat-box">
         <div class="citat">${quote.quote}</div>
