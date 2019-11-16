@@ -1,5 +1,9 @@
 // Used for  UI updates
 var loggedIn;
+var db = firebase.firestore();
+var form = document.querySelector("#form");
+form.addEventListener('submit', onSubmit);
+
 
 function login(email, password){
     firebase.auth().singInWithEmailAndPassword(email, password).catch(function(error) {
@@ -19,7 +23,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   });
 
   function getQuotes(){
-      var db = firebase.firestore();
       return db.collection("quotes").get().then(function(querySnapshot){
         return querySnapshot.docs.map(function(doc,i){
             return doc.data();
@@ -28,7 +31,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 
   function renderQuotes(quotes){
-    console.log(quotes.length);
     var wrapper = document.querySelector("#quotes");
     var quoteHTML = quotes.map(function(quote){
         return `<div class="citat-box">
@@ -42,10 +44,22 @@ firebase.auth().onAuthStateChanged(function(user) {
     wrapper.innerHTML = quoteHTML.join('');
   }
 
-  function postQuote(quote, name){
-
-  }
 
 getQuotes().then(function(quotes) {
     renderQuotes(quotes);
 });
+
+function onSubmit(e){
+    e.preventDefault();
+    console.log(e);
+    console.log("Submitting form...");
+    db.collection("quotes").add({
+        quote: e.target[0].value,
+        who: e.target[1].value,
+        datetime: firebase.firestore.Timestamp.fromDate(new Date())
+    }).then(function(docref){
+        console.log(docref + " successfully added.");
+    }).catch(function(error){
+        console.error("Error adding doc: ", error);
+    });
+}
