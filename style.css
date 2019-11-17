@@ -157,3 +157,15 @@ label {
         display: block;
     }
 }
+
+#login{
+    display: none;
+}
+
+#form{
+    display: none;
+}
+
+#quotes{
+    padding-bottom: 30px;
+}

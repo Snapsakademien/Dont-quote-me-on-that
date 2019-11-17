@@ -2,14 +2,18 @@ var db = firebase.firestore();
 var form = document.querySelector("#form");
 var loginEl = document.querySelector("#login");
 var citatFormBtn = document.querySelector(".btn-addQuote");
-citatFormBtn.addEventListener('click', toggleQuoteForm);
+citatFormBtn.addEventListener('click', function(){toggleElement(form)});
 form.addEventListener('submit', onSubmit);
 loginEl.addEventListener('submit', login);
+
+loginEl.style.display = "none";
+form.style.display = "none";
 
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log("User logged in");
+        loginEl.style.display = "none";
         
         updateQuotes();
     } else {
@@ -82,7 +86,6 @@ function login(event){
     });
 }
 
-function toggleQuoteForm()
-{
-    form.style.display = form.style.display === "none" ? "block": "none";
+function toggleElement(el){
+    el.style.display = el.style.display === "none" ? "block": "none";
 }
