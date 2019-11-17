@@ -1,3 +1,8 @@
+*::selection {
+  background-color: #123456;
+  color: white;
+}
+
 h1 {
   color: #fff4e6;
   display: inline-block;
@@ -60,35 +65,31 @@ body {
   padding-bottom: 1rem;
 }
 
-input
-{
-    width: 100%;
-    padding: 10px 10px;
-    border-radius: 5px;
-    border: 1px solid rgba(128, 128, 128, 0.74);
-    font-size: 17px;
-    margin-top: 5px;
-    background-color: #f0f0f0;
+input {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.74);
+  font-size: 17px;
+  margin-top: 5px;
+  background-color: #f0f0f0;
 }
 
-input[type=text]
-{
-    box-shadow: 0px 0px 4px 0.5px grey inset;
-    border: 1px solid rgba(60, 47, 47, 0.76);
+input[type="text"] {
+  box-shadow: 0px 0px 4px 0.5px grey inset;
+  border: 1px solid rgba(60, 47, 47, 0.76);
 }
 
-input[type=password]
-{
-    box-shadow: 0px 0px 4px 0.5px grey inset;
-    border: 1px solid rgba(60, 47, 47, 0.76);
+input[type="password"] {
+  box-shadow: 0px 0px 4px 0.5px grey inset;
+  border: 1px solid rgba(60, 47, 47, 0.76);
 }
 
-label
-{
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    padding-top: 10px;
-    font-size: 1.5em;
+label {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  padding-top: 10px;
+  font-size: 1.5em;
 }
 
 .container {
@@ -96,30 +97,27 @@ label
   justify-content: flex-end;
 }
 
-.button
-{
-    padding: 16px 32px;
-    text-decoration: none;
-    margin-top: 13px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2em;
-    width: 150px;
-    font-family: 'Cormorant Garamond', serif;
+.button {
+  padding: 16px 32px;
+  text-decoration: none;
+  margin-top: 13px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2em;
+  width: 150px;
+  font-family: "Cormorant Garamond", serif;
 }
 
-.btn-submit
-{
-    background-color: #be9b7b;
-    border: 2px solid #3c2f2f;
-    color: #3c2f2f;
-    transition: background-color 0.2s, color 0.2s;
+.btn-submit {
+  background-color: #be9b7b;
+  border: 2px solid #3c2f2f;
+  color: #3c2f2f;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.btn-submit:hover
-{
-    background-color: #3c2f2f;
-    color: #fff4e6;
+.btn-submit:hover {
+  background-color: #3c2f2f;
+  color: #fff4e6;
 }
 
 .btn-addQuote
@@ -135,9 +133,8 @@ label
     color: #fff4e6;
 }
 
-.btn-addQuote:active
-{
-    background-color: #6f3735;
+.btn-addQuote:active {
+  background-color: #6f3735;
 }
 
 @media screen and (max-width: 600px) {
@@ -147,13 +144,13 @@ label
   .button {
     width: 100%;
   }
-  
+
     .header{
         display: block;
     padding-bottom: 20px;
     text-align: center;
     }
-    
+
     .btn-addQuote{
         width: 90%;
         margin: 0 auto;

@@ -11,12 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log("User logged in");
         
-        getQuotes().then(function(quotes) {
-            quotes.sort(function(a,b){
-                return b.datetime.seconds - a.datetime.seconds;
-            });
-            renderQuotes(quotes);
-        });
+        updateQuotes();
     } else {
 
         console.log("User logged out");
@@ -46,6 +41,15 @@ firebase.auth().onAuthStateChanged(function(user) {
     wrapper.innerHTML = quoteHTML.join('');
   }
 
+  function updateQuotes(){
+    getQuotes().then(function(quotes) {
+        quotes.sort(function(a,b){
+            return b.datetime.seconds - a.datetime.seconds;
+        });
+        renderQuotes(quotes);
+    });
+  }
+
 
 //Form submissions
 
@@ -59,7 +63,9 @@ function onSubmit(e){
         datetime: firebase.firestore.Timestamp.fromDate(new Date())
     }).then(function(docref){
         console.log(docref + " successfully added.");
+        updateQuotes();
     }).catch(function(error){
+        alert('Could not submit. Are you logged in?');
         console.error("Error adding doc: ", error);
     });
 }
@@ -72,7 +78,7 @@ function login(event){
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
         var errorCode = error.code;
         var errorMsg = error.message;
-        alert('Login failed', errorCode, errorMsg);
+        alert("Login failed. Try again. Bitch. I've got all day.");
     });
 }
 
