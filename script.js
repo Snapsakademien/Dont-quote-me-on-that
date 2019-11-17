@@ -6,6 +6,7 @@ citatFormBtn.addEventListener('click', function(){toggleElement(form)});
 form.addEventListener('submit', onSubmit);
 loginEl.addEventListener('submit', login);
 
+citatFormBtn.style.display = "none";
 loginEl.style.display = "none";
 form.style.display = "none";
 
@@ -14,10 +15,12 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log("User logged in");
         loginEl.style.display = "none";
+        citatFormBtn.style.display = "block";
         
         updateQuotes();
     } else {
-
+        citatFormBtn.style.display = "none";
+        loginEl.style.display = "block";
         console.log("User logged out");
 
     }
@@ -72,6 +75,9 @@ function onSubmit(e){
         alert('Could not submit. Are you logged in?');
         console.error("Error adding doc: ", error);
     });
+    
+    e.target[0].value = "";
+    e.target[1].value = "";
 }
 
 function login(event){
