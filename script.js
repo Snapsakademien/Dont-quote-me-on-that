@@ -1,6 +1,8 @@
 var db = firebase.firestore();
 var form = document.querySelector("#form");
 var loginEl = document.querySelector("#login");
+var citatFormBtn = document.querySelector(".btn-addQuote");
+citatFormBtn.addEventListener('click', toggleQuoteForm);
 form.addEventListener('submit', onSubmit);
 loginEl.addEventListener('submit', login);
 
@@ -72,4 +74,9 @@ function login(event){
         var errorMsg = error.message;
         alert('Login failed', errorCode, errorMsg);
     });
+}
+
+function toggleQuoteForm()
+{
+    form.style.display = form.style.display === "none" ? "block": "none";
 }

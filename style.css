@@ -1,5 +1,6 @@
 h1 {
   color: #fff4e6;
+  display: inline-block;
 }
 
 .login-heading {
@@ -47,6 +48,8 @@ body {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
   background-color: #3c2f2f;
   font-family: "Cormorant Garamond", serif;
 }
@@ -121,9 +124,14 @@ label
 
 .btn-addQuote
 {
+    padding: 5px;
+    margin-top: 30px;
+    margin-right: 20px;
+    vertical-align: middle;
     background-color: #854442;
     border: 2px solid #854442;
-    width: 100%;
+    width: 150px;
+    height: 50px;
     color: #fff4e6;
 }
 
@@ -139,4 +147,16 @@ label
   .button {
     width: 100%;
   }
+  
+    .header{
+        display: block;
+    padding-bottom: 20px;
+    text-align: center;
+    }
+    
+    .btn-addQuote{
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
 }
