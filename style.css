@@ -1,69 +1,60 @@
-h1
-{
-    color: #fff4e6;
+h1 {
+  color: #fff4e6;
 }
 
-.login-heading
-{
-    font-size: 60px;
-    font-family: 'Cormorant Garamond', serif;
-    text-align: center;
+.login-heading {
+  font-size: 60px;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
 }
 
-body
-{
-    background-color: #be9b7b;
+body {
+  background-color: #be9b7b;
 }
 
-.wrapper
-{
-    /*background-color: green; */
-    width: 40%; 
-    max-width: 100%; 
-    margin: 0 auto;
+.wrapper {
+  /*background-color: green; */
+  width: 40%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.citat-box
-{
-    border-color: grey;
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.28);
-    border-radius: 5px;
-    background-color: #fff4e6;
-    margin-top: 20px;
+.citat-box {
+  border-color: grey;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.28);
+  border-radius: 5px;
+  background-color: #fff4e6;
+  margin-top: 20px;
 }
 
-.citat
-{
-    /*background-color: aqua;*/
-    font-size: 1.4em;
-    margin-left: 10px;
-    padding-top: 10px;
-    color: #251e3e;
-    font-family: 'Tenor Sans', sans-serif;
+.citat {
+  /*background-color: aqua;*/
+  font-size: 1.4em;
+  margin-left: 10px;
+  padding-top: 10px;
+  color: #251e3e;
+  font-family: "Tenor Sans", sans-serif;
 }
 
-.person
-{
-    /*background-color: red; */
-    text-align: right;
-    margin-right: 10px;
-    padding-bottom: 10px;
-    padding-top: 5px;
-    font-size: 1.2em;
-    font-family: 'Cormorant Garamond', serif;
+.person {
+  /*background-color: red; */
+  text-align: right;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  font-size: 1.2em;
+  font-family: "Cormorant Garamond", serif;
 }
 
-.header
-{
-    background-color: #3c2f2f;
-    font-family: 'Cormorant Garamond', serif;
+.header {
+  background-color: #3c2f2f;
+  font-family: "Cormorant Garamond", serif;
 }
 
-.header-text
-{
-    padding-top: 1rem; 
-    padding-left: 1rem; 
-    padding-bottom: 1rem;
+.header-text {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
 }
 
 input
@@ -97,10 +88,9 @@ label
     font-size: 1.5em;
 }
 
-.container
-{
-    display: flex;
-    justify-content: flex-end
+.container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .button
@@ -143,10 +133,10 @@ label
 }
 
 @media screen and (max-width: 600px) {
-    .wrapper {
-        width: 90%;
-    }
-    .button{
-        width: 100%;
-    }
+  .wrapper {
+    width: 90%;
+  }
+  .button {
+    width: 100%;
+  }
 }
