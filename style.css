@@ -31,6 +31,12 @@ body {
   border-radius: 5px;
   background-color: #fff4e6;
   margin-top: 20px;
+
+  background-image: url("quotes.svg");
+  background-repeat: no-repeat;
+  background-size: 82px;
+  background-position: right;
+  background-position-y: -16px;
 }
 
 .citat {
@@ -120,17 +126,16 @@ label {
   color: #fff4e6;
 }
 
-.btn-addQuote
-{
-    padding: 5px;
-    margin-top: 30px;
-    margin-right: 20px;
-    vertical-align: middle;
-    background-color: #854442;
-    border: 2px solid #854442;
-    width: 150px;
-    height: 50px;
-    color: #fff4e6;
+.btn-addQuote {
+  padding: 5px;
+  margin-top: 30px;
+  margin-right: 20px;
+  vertical-align: middle;
+  background-color: #854442;
+  border: 2px solid #854442;
+  width: 150px;
+  height: 50px;
+  color: #fff4e6;
 }
 
 .btn-addQuote:active {
@@ -145,17 +150,17 @@ label {
     width: 100%;
   }
 
-    .header{
-        display: block;
+  .header {
+    display: block;
     padding-bottom: 20px;
     text-align: center;
-    }
+  }
 
-    .btn-addQuote{
-        width: 90%;
-        margin: 0 auto;
-        display: block;
-    }
+  .btn-addQuote {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 #login{
