@@ -66,9 +66,7 @@ body {
 }
 
 .header-text {
-  padding-top: 1rem;
   padding-left: 1rem;
-  padding-bottom: 1rem;
 }
 
 input {
@@ -128,7 +126,7 @@ label {
 
 .btn-addQuote {
   padding: 5px;
-  margin-top: 30px;
+  margin-top: auto 0;
   margin-right: 20px;
   vertical-align: middle;
   background-color: #854442;
