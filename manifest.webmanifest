@@ -3,7 +3,7 @@
   "short_name": "Citatbok",
   "theme_color": "#3c2f2f",
   "background_color": "#3c2f2f",
-  "display": "browser",
+  "display": "fullscreen",
   "Scope": "/",
   "start_url": "/",
   "icons": [
