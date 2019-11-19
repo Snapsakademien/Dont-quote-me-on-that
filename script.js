@@ -95,3 +95,16 @@ function login(event){
 function toggleElement(el){
     el.style.display = el.style.display === "none" ? "block": "none";
 }
+
+// Install Service Workers because PWAs are cool
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }

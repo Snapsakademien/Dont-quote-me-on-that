@@ -1,0 +1,1 @@
+//TODO Create service worker that handles requests and offline sync
