@@ -1,4 +1,5 @@
 var db = firebase.firestore();
+var localStorage = window.localStorage;
 var form = document.querySelector("#form");
 var loginEl = document.querySelector("#login");
 var citatFormBtn = document.querySelector(".btn-addQuote");
@@ -10,6 +11,7 @@ citatFormBtn.style.display = "none";
 loginEl.style.display = "none";
 form.style.display = "none";
 
+renderQuotes();
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -34,13 +36,15 @@ firebase.auth().onAuthStateChanged(function(user) {
       });
   }
 
-  function renderQuotes(quotes){
+  function renderQuotes(){
+    var quotes = JSON.parse(localStorage.getItem('quotes')) ? JSON.parse(localStorage.getItem('quotes')) : [];
+    console.log(quotes);
     var wrapper = document.querySelector("#quotes");
     var quoteHTML = quotes.map(function(quote){
         return `<div class="citat-box">
         <div class="citat">${quote.quote}</div>
         <div class="person">
-            <i>-${quote.who}, ${new Intl.DateTimeFormat("sv-SE").format(quote.datetime.toDate())}</i>
+            <i>-${quote.who}, ${quote.datetime}</i>
         </div>
     </div>`;
     });
@@ -53,7 +57,12 @@ firebase.auth().onAuthStateChanged(function(user) {
         quotes.sort(function(a,b){
             return b.datetime.seconds - a.datetime.seconds;
         });
-        renderQuotes(quotes);
+        var dateQuotes = quotes.map(function(quote){
+            quote.datetime = new Intl.DateTimeFormat("sv-SE").format(quote.datetime.toDate());
+            return quote;
+        });
+        localStorage.setItem('quotes', JSON.stringify(dateQuotes));
+        renderQuotes();
     });
   }
 
