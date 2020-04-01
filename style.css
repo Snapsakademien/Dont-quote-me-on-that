@@ -48,6 +48,7 @@ body {
 }
 
 .link {
+  display: block;
   opacity: 0.2;
   color: #251e3e;
   margin-right: 5px;
