@@ -40,12 +40,22 @@ body {
 }
 
 .citat {
-  /*background-color: aqua;*/
   font-size: 1.4em;
   margin-left: 10px;
   padding-top: 10px;
   color: #251e3e;
   font-family: "Tenor Sans", sans-serif;
+}
+
+.link {
+  opacity: 0.2;
+  color: #251e3e;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.link:hover{
+  text-decoration: underline;
 }
 
 .person {
