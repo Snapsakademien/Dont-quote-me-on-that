@@ -37,8 +37,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   function renderQuotes(quotes){
     var wrapper = document.querySelector("#quotes");
     var quoteHTML = quotes.map(function(quote, i){
-        return `<div class="citat-box" id="${i}">
-        <div class="citat"><a class="link" href="#${i}">#${i}</a>${quote.quote}</div>
+        var index = quotes.length-i;
+        return `<div class="citat-box" id="${index}">
+        <div class="citat"><a class="link" href="#${index}">#${index}</a>${quote.quote}</div>
         <div class="person">
             <i>-${quote.who}, ${new Intl.DateTimeFormat("sv-SE").format(quote.datetime.toDate())}</i>
         </div>
